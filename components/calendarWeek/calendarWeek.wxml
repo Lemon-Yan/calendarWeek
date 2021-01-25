@@ -1,0 +1,25 @@
+<!--components/calendarWeek/calendarWeek.wxml-->
+<view class="date-choose shrink border-bottom10">
+  <picker mode="date" bindchange="tiaotime">
+    <view class="data-month">{{dateYear}}{{dateMonth}}</view>
+  </picker>
+  <view class="weekday">
+    <block wx:for-item="weekday" wx:for="{{dateListArray}}" wx:key="{{index}}">
+      <text class="week">{{weekday}}</text>
+    </block>
+  </view>
+  <swiper class="date-choose-swiper" circular="true" indicator-dots="{{false}}" current="{{swiperCurrent}}"
+    bindchange="dateSwiperChange">
+    <block wx:for="{{dateList}}" wx:for-item="date" wx:key="date.id">
+      <swiper-item class="swiper-item"> 
+        <view class="dateday">
+          <block wx:for="{{date.days}}" wx:for-item="day" wx:key="{{day.id}}">
+            <view class="day" id="{{day.id}}" bindtap="chooseDate">
+              <text class="{{dateCurrentStr==day.id?'active':''}}{{today==day.id?' reds':''}}">{{day.day}}</text>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

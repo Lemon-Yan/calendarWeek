@@ -1,0 +1,153 @@
+/* components/calendarWeek/calendarWeek.wxss */ 
+.date-choose {
+  background: #fff;
+  overflow: hidden;
+  height: auto;
+}
+
+.data-month {
+  width: 100%;
+  align-items: center;
+  padding: .5rem .35rem;
+  text-align: left;
+  color: #333;
+  font-size: 36rpx;
+}
+
+.date-choose-swiper {
+  flex-grow: 1;
+  height: 120rpx;
+}
+
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.weekday,
+.dateday {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.week,
+.day {
+  width: 14.286%;
+  flex-basis: 14.286%;
+}
+
+.week {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.day text {
+  position: relative;
+  color: #333333;
+}
+
+.day .active:before {
+  /* 圈圈 */
+  content: "";
+  position: absolute;
+  width: 76rpx;
+  height: 76rpx;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+  border-radius: 100%;
+  background: red;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.day text.active {
+  color: red
+}
+
+.day text.reds {
+  color: #ff0000;
+}
+
+/*开始*/
+
+.headerone {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx; 
+}
+
+.headerone .ra {
+  margin-right: 20rpx; 
+}
+
+.headerone .radio-group {
+  margin: 20rpx 0 20rpx 30rpx;
+}
+
+.headertwo {
+  width: 100%;
+  height: auto;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  margin-bottom: 26rpx;
+}
+
+.headertwo .le image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 10px;
+  margin-left: 30rpx;
+  margin-right: 20rpx
+}
+
+.headertwo .ri {
+  flex: 1;
+  margin-right: 30rpx;
+  border-radius: 6px;
+  box-shadow: 0px 1px 6px 0px rgba(198, 198, 198, 0.5);
+}
+
+.headertwo .ri .one {
+  width: 100%;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx
+}
+
+.headertwo .ri .one view .jiao {
+  margin: 0 16rpx;
+  border: 15rpx solid; 
+  border-color: #ffffff #ffffff #b3b3b3 #ffffff;
+}
+
+.xi {
+  background: red;
+  color: #ffffff;
+  padding: 3px 10px;
+  border-radius: 6px 0px 0 6px; 
+}
+
+.headertwo .ri .one view view.jiaos {
+  margin: 0 16rpx;
+  border: 15rpx solid;
+  margin-top: 14rpx;
+  border-color: #b3b3b3 #ffffff #ffffff #ffffff;
+}
+
+.headertwo .ri .two {
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s
+}
+
+.headertwo .ri .two .body {
+  width: 100%;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}

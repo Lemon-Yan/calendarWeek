@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "calendarMonth": "../../components/calendarWeek/calendarWeek"
+  }
+}

@@ -1,0 +1,3 @@
+<view class="wrapper">
+  <calendarMonth bindmydata="mydata"></calendarMonth> 
+</view>
